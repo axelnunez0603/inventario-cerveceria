@@ -20,7 +20,6 @@ class ProductoValidatorTest extends TestCase
     public function valida_que_precio_venta_sea_mayor_que_precio_compra()
     {
         $resultado = $this->validator->validarPrecios(10.00, 15.00);
-
         $this->assertTrue($resultado);
     }
 
@@ -28,7 +27,6 @@ class ProductoValidatorTest extends TestCase
     public function rechaza_precio_venta_menor_que_precio_compra()
     {
         $resultado = $this->validator->validarPrecios(10.00, 8.00);
-
         $this->assertFalse($resultado);
     }
 }
